@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CorityOne · Central User Management — Prototypes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-app: #F6F6F6;
+  --bg-surface: #FFFFFF;
+  --fg-1: #333333;
+  --fg-2: #54565B;
+  --fg-3: #707070;
+  --border: #E3E3E3;
+  --action: #3366DD;
+  --action-hover: #224980;
+  --brand: #D46027;
+  --font: "Inter", "Noto Sans", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font); background: var(--bg-app); color: var(--fg-1);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 32px;
+}
+.wrap { width: 100%; max-width: 760px; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--brand); margin-bottom: 6px; }
+h1 { font-size: 26px; font-weight: 600; margin-bottom: 6px; }
+.sub { font-size: 15px; color: var(--fg-2); margin-bottom: 28px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.card {
+  background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 24px; text-decoration: none; color: inherit; display: flex; flex-direction: column;
+  transition: box-shadow .18s, border-color .18s, transform .18s;
+}
+.card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.10); border-color: #C7D2FF; transform: translateY(-2px); }
+.badge { align-self: flex-start; font-size: 12px; font-weight: 700; color: #fff; background: var(--action); border-radius: 999px; padding: 3px 11px; margin-bottom: 14px; }
+.card h2 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.card p { font-size: 14px; color: var(--fg-2); line-height: 1.45; flex: 1; }
+.go { margin-top: 18px; font-size: 14px; font-weight: 600; color: var(--action); display: inline-flex; align-items: center; gap: 6px; }
+.foot { margin-top: 28px; font-size: 12px; color: var(--fg-3); text-align: center; }
+@media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">CorityOne · Central User Management</div>
+    <h1>Create New User — Usability Test</h1>
+    <p class="sub">Two design approaches for the same task. Open either prototype to walk through creating a user.</p>
+
+    <div class="cards">
+      <a class="card" href="prototype-a-continuous.html">
+        <span class="badge">Design A</span>
+        <h2>Continuous Form</h2>
+        <p>A single continuous page with all fields grouped under collapsible sections.</p>
+        <span class="go">Open Prototype A →</span>
+      </a>
+
+      <a class="card" href="prototype-b-stepper.html">
+        <span class="badge">Design B</span>
+        <h2>Stepper</h2>
+        <p>A guided three-step wizard (User Information → Persona Setup → Role Fields) with Back / Next.</p>
+        <span class="go">Open Prototype B →</span>
+      </a>
+    </div>
+
+    <p class="foot">Prototypes are for testing only. Sample data: Dr. Murphy Cooper.</p>
+  </div>
+</body>
+</html>
